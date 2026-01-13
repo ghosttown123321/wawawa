@@ -1,0 +1,9 @@
+local HttpService = game:GetService("HttpService")
+
+local messageData = {
+    content = "test"
+}
+
+local jsonData = HttpService:JSONEncode(messageData)
+
+HttpService:PostAsync("https://discord.com/api/webhooks/1460653547690397876/gocrv0MMZUBLjZaG0yg9d2w8PvzbCVvQ2KKXGbsUY0DNvkWqi--Qk-DZb0klMMjTf2PJ", jsonData, Enum.HttpContentType.ApplicationJson)
